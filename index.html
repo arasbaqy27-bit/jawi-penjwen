@@ -32,20 +32,26 @@
       .custom-scrollbar::-webkit-scrollbar { height: 4px; }
       .custom-scrollbar::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.2); border-radius: 10px; }
     </style>
-  <script type="importmap">
-{
-  "imports": {
-    "react/": "https://esm.sh/react@^19.2.3/",
-    "react": "https://esm.sh/react@^19.2.3",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
-    "@google/genai": "https://esm.sh/@google/genai@^1.35.0"
-  }
-}
-</script>
-</head>
+    <script>
+      // بۆ ڕێگری لە وەستانی ئەپەکە لەسەر نێتلیفای و سێرڤەرەکان
+      window.process = window.process || { env: {} };
+    </script>
+    <script type="importmap">
+    {
+      "imports": {
+        "react/": "https://esm.sh/react@^19.2.3/",
+        "react": "https://esm.sh/react@^19.2.3",
+        "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+        "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+        "@google/genai": "https://esm.sh/@google/genai@^1.35.0"
+      }
+    }
+    </script>
+  </head>
   <body>
     <div id="root"></div>
+    <!-- ئەم دێڕە گرنگە بۆ ئەوەی ئەپەکە دەست بە کار بکات -->
+    <script type="module" src="index.tsx"></script>
     <script>
       // Handling Service Worker registration with error catching to avoid sandbox origin issues
       if ('serviceWorker' in navigator) {

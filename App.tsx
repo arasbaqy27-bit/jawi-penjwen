@@ -221,7 +221,7 @@ const App: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <InfoCard 
               icon={Navigation} 
-              title="ڕێگاوبانی سەیرانبەن و هاتوچۆ" 
+              title="ڕێنمایی هاتووچۆ" 
               content={data.roadStatus} 
               colorClass="text-orange-400"
             />
